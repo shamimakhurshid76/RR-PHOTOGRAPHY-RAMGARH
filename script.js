@@ -1,3 +1,4 @@
+// WhatsApp form
 document.getElementById("whatsappForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -13,4 +14,9 @@ document.getElementById("whatsappForm").addEventListener("submit", function(e) {
         + "Message: " + message;
 
     window.open(url, "_blank");
+});
+
+// Floating WhatsApp button
+document.getElementById("whatsappBtn").addEventListener("click", function() {
+    window.open("https://wa.me/919876543210", "_blank");
 });
