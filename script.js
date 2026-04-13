@@ -1,31 +1,16 @@
-function 
-// Function to open Lightbox
-document.querySelectorAll('.gallery-grid img').forEach(image => {
-    image.onclick = () => {
-        document.getElementById('lightbox').style.display = 'flex';
-        document.getElementById('lightbox-img').src = image.src;
-    };
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let message = document.getElementById("message").value;
+
+    let number = "919006211773"; // 🔴 PUT YOUR NUMBER
+
+    let url = "https://wa.me/" + number + "?text="
+        + "Name: " + name + "%0a"
+        + "Phone: " + phone + "%0a"
+        + "Message: " + message;
+
+    window.open(url, "_blank");
 });
-
-// Function to close Lightbox
-function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-}
-   sendToWhatsApp() {
-    const name = document.getElementById('userName').value;
-    const event = document.getElementById('eventType').value;
-    const msg = document.getElementById('userMsg').value;
-    
-    // REPLACE WITH YOUR ACTUAL PHONE NUMBER (Include Country Code)
-    const phoneNumber = "919006211773"; 
-
-    if (name === "" || event === "") {
-        alert("Please fill in your name and event type!");
-        return;
-    }
-
-    const message = `Hello RR Photography!%0A%0A*Client Name:* ${name}%0A*Event:* ${event}%0A*Details:* ${msg}`;
-    const waUrl = `https://wa.me{phoneNumber}?text=${message}`;
-
-    window.open(waUrl, '_blank');
-}
