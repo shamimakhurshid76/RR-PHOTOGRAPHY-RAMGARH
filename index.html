@@ -1,90 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RR PHOTOGRAPHY RAMGARH | Professional Studio</title>
-    <!-- External Links -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RR Photography Ramgarh</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #1e293b;
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+nav a:hover {
+    background: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #38bdf8, #0ea5e9);
+    color: white;
+}
+
+/* SECTION */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+}
+form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+button {
+    padding: 12px;
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* FAQ */
+.faq-item {
+    margin-bottom: 15px;
+}
+.faq-item h4 {
+    margin: 0;
+}
+
+/* FOOTER */
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
+
 <body>
 
-    <nav>
-        <div class="logo">RR PHOTOGRAPHY</div>
-    </nav>
+<header>
+    <h1>RR Photography Ramgarh</h1>
+    <p>Capturing Moments That Last Forever</p>
+</header>
 
-    <header class="hero">
-        <h1>RR PHOTOGRAPHY RAMGARH</h1>
-        <p>Capturing the soul of Ramgarh through premium storytelling.</p>
-    </header>
+<nav>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Book Now</a>
+    <a href="#faq">FAQ</a>
+</nav>
 
-    <section class="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-ring"></i>
-                <h3>Wedding Shoots</h3>
-                <p>Candid & cinematic coverage of your big day with 4K video.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-camera-retro"></i>
-                <h3>Portraits</h3>
-                <p>Personalized indoor and outdoor photoshoots for every style.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-video"></i>
-                <h3>Event Coverage</h3>
-                <p>Birthdays and corporate events captured perfectly.</p>
-            </div>
-        </div>
-    </section>
-<section class="gallery-section">
-    <h2 class="section-title">Gallery</h2>
-    <div class="gallery-grid">
-        <!-- Reliably sourced professional photography placeholders -->
-        <img src="https://picsum.photos" alt="Wedding Photography">
-        <img src="https://picsum.photos" alt="Cinematic Event">
-        <img src="https://picsum.photos" alt="Portrait Studio">
-        <img src="https://picsum.photos" alt="Nature Shoot">
-        <img src="https://picsum.photos" alt="Event Coverage">
+<div class="hero">
+    <h2>Professional Wedding & Event Photography</h2>
+    <p>We turn your memories into timeless stories</p>
+</div>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>RR Photography Ramgarh specializes in wedding, pre-wedding, event, and portrait photography. We capture every detail with creativity and passion to make your memories unforgettable.</p>
+</section>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="https://picsum.photos/400?1">
+        <img src="https://picsum.photos/400?2">
+        <img src="https://picsum.photos/400?3">
+        <img src="https://picsum.photos/400?4">
+        <img src="https://picsum.photos/400?5">
     </div>
 </section>
-    <section class="faq-section">
-        <h2 class="section-title">FAQ</h2>
-        <details>
-            <summary>Do you offer drone photography?</summary>
-            <p>Yes, we provide 4K cinematic drone shots for weddings and large events.</p>
-        </details>
-        <details>
-            <summary>When will I receive my photos?</summary>
-            <p>Previews are sent within 3 days; final album within 15-20 days.</p>
-        </details>
-    </section>
 
-    <section class="contact-section">
-        <h2 class="section-title">Book via WhatsApp</h2>
-        <div class="form-box">
-            <input type="text" id="userName" placeholder="Your Full Name">
-            <input type="text" id="eventType" placeholder="Event Type (e.g., Wedding)">
-            <textarea id="userMsg" rows="3" placeholder="Preferred Date and Location..."></textarea>
-            <button class="wa-btn" onclick="sendToWhatsApp()">
-                <i class="fab fa-whatsapp"></i> Send WhatsApp Message
-            </button>
-        </div>
-    </section>
+<section id="contact">
+    <h2>Book Your Shoot</h2>
+    <form onsubmit="sendToWhatsApp(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <textarea id="message" placeholder="Your Requirement"></textarea>
+        <button type="submit">Send on WhatsApp</button>
+    </form>
+</section>
 
-    <footer>
-        <p class="footer-name">RR PHOTOGRAPHY RAMGARH</p>
-        <p class="footer-desc">Premium cinematography, portraits, and event coverage. We blend modern techniques with a timeless aesthetic to turn your moments into lifelong memories. Professional, passionate, and local.</p>
-        <p class="copyright">© 2024 RR PHOTOGRAPHY RAMGARH. ALL RIGHTS RESERVED.</p>
-    </footer>
+<section id="faq">
+    <h2>FAQ</h2>
 
-    <script src="script.js"></script>
-<!-- Lightbox Overlay -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="close">&times;</span>
-    <img id="lightbox-img" src="" alt="Zoomed view">
-</div>
+    <div class="faq-item">
+        <h4>What services do you offer?</h4>
+        <p>We offer wedding, pre-wedding, birthday, and event photography services.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>How can I book?</h4>
+        <p>You can fill the form and contact us directly on WhatsApp.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>Do you travel for shoots?</h4>
+        <p>Yes, we are available for outstation photography assignments.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 RR Photography Ramgarh. All Rights Reserved.</p>
+    <p>RR Photography Ramgarh is a professional photography service dedicated to capturing life’s most precious moments with creativity, precision, and passion.</p>
+</footer>
+
+<script>
+function sendToWhatsApp(e) {
+    e.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+
+    var whatsappNumber = "919006211773"; // 
+
+    var url = "https://wa.me/" + whatsappNumber + "?text="
+        + "Name: " + name + "%0a"
+        + "Phone: " + phone + "%0a"
+        + "Message: " + message;
+
+    window.open(url, "_blank");
+}
+</script>
+
 </body>
 </html>
