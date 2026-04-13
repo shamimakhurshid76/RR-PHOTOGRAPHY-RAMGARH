@@ -1,4 +1,17 @@
-function sendToWhatsApp() {
+function 
+// Function to open Lightbox
+document.querySelectorAll('.gallery-grid img').forEach(image => {
+    image.onclick = () => {
+        document.getElementById('lightbox').style.display = 'flex';
+        document.getElementById('lightbox-img').src = image.src;
+    };
+});
+
+// Function to close Lightbox
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+   sendToWhatsApp() {
     const name = document.getElementById('userName').value;
     const event = document.getElementById('eventType').value;
     const msg = document.getElementById('userMsg').value;
