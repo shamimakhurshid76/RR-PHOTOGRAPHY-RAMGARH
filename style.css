@@ -1,84 +1,122 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f8fb;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+    color: #0f172a;
+}
+
+/* Glass Effect */
+.glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+/* Header */
 header {
-    background: #0f172a;
-    color: white;
     text-align: center;
     padding: 20px;
 }
 
+/* Nav */
 nav {
     display: flex;
     justify-content: center;
-    background: #1e293b;
+    gap: 20px;
+    padding: 10px;
 }
-
 nav a {
-    color: white;
-    padding: 14px 20px;
     text-decoration: none;
+    color: #0f172a;
+    font-weight: 500;
 }
-
 nav a:hover {
-    background: #38bdf8;
+    color: #0284c7;
 }
 
+/* Hero */
 .hero {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #38bdf8, #0ea5e9);
-    color: white;
+    padding: 80px 20px;
+}
+.hero h2 {
+    font-size: 2.5rem;
 }
 
+/* Sections */
 section {
-    padding: 40px 20px;
     max-width: 1000px;
     margin: auto;
+    padding: 40px 20px;
 }
 
+/* Gallery */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
-
 .gallery img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.gallery img:hover {
+    transform: scale(1.08);
 }
 
+/* Form */
 form {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
 }
-
 form input, form textarea {
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
 }
-
 button {
     padding: 12px;
-    background: #0ea5e9;
+    background: #0284c7;
     color: white;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
-
 button:hover {
-    background: #0284c7;
+    background: #0369a1;
 }
 
+/* FAQ */
+.faq-item {
+    margin-bottom: 15px;
+}
+
+/* Footer */
 footer {
-    background: #0f172a;
-    color: white;
     text-align: center;
     padding: 20px;
+    background: #0f172a;
+    color: white;
+}
+
+/* WhatsApp Floating */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
 }
