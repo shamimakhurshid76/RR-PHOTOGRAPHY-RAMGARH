@@ -4,7 +4,7 @@ function sendToWhatsApp() {
     const msg = document.getElementById('userMsg').value;
     
     // REPLACE WITH YOUR ACTUAL PHONE NUMBER (Include Country Code)
-    const phoneNumber = "919999999999"; 
+    const phoneNumber = "919006211773"; 
 
     if (name === "" || event === "") {
         alert("Please fill in your name and event type!");
